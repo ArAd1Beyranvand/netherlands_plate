@@ -1,7 +1,7 @@
 name: netherlands_plate
 description: "Netherlands's licence plates for the plate_core library — sidecodes 6–14 and special plates, themes and an advisory validator."
 version: 0.1.0
-repository: https://github.com/ArAd1Beyranvand/netherlands_plate
+repository: https://github.com/ArAd1Beyranvand/netherlands_plate/tree/main/flutter
 resolution: workspace
 
 environment:
