@@ -6,13 +6,24 @@ GO VEGAN 🌱
 
 From the mighty people of Iran to the hospitable people of the Netherlands to view examples:
 
-https://platexample.ir/#/discover/netherlands
+https://platexample.ir/#/discover/netherlands:flutter
 
 # netherlands_plate
 
-Netherlands's licence plates for the `plate_core` library. Sidecodes 6–14 and the special plates, black on yellow with an EU panel, with an advisory validator.
+Netherlands's licence plates for the plate_core library — sidecodes 6–14 and special plates, themes and an advisory validator.
 
-## Install
+## Languages
+
+| Language | Folder | Example |
+| --- | --- | --- |
+| Flutter / Dart | [`flutter/`](https://github.com/ArAd1Beyranvand/netherlands_plate/tree/main/flutter) | [platexample](https://platexample.ir/#/discover/netherlands:flutter) |
+| Kotlin | [`kotlin/`](https://github.com/ArAd1Beyranvand/netherlands_plate/tree/main/kotlin) | [platexample](https://platexample.ir/#/discover/netherlands:kotlin) |
+| Python | [`python/`](https://github.com/ArAd1Beyranvand/netherlands_plate/tree/main/python) | [platexample](https://platexample.ir/#/discover/netherlands:python) |
+| TypeScript | [`typescript/`](https://github.com/ArAd1Beyranvand/netherlands_plate/tree/main/typescript) | [platexample](https://platexample.ir/#/discover/netherlands:typescript) |
+
+## Quick start
+
+### Install
 
 ```yaml
 dependencies:
@@ -20,7 +31,7 @@ dependencies:
   netherlands_plate: ^0.1.0
 ```
 
-## Use
+### Use
 
 ```dart
 import 'package:plate_core/plate_core.dart';
@@ -35,12 +46,41 @@ PlateCanvas(
 );
 ```
 
-## Contains
+## Specs
 
-- `NetherlandsCountry` — country panel: `netherlands`.
-- `NetherlandsPlates` — 16 plate specs: `sidecode6`, `sidecode7`, `sidecode8`, `sidecode9`, `sidecode10`, `sidecode11`, `sidecode12`, `sidecode13`, `sidecode14`, `royal`, `trailer`, `special`, `diplomatic`, `consular` and 2 more.
-- `NetherlandsThemes` — 3 themes: `standard`, `dealer`, `bfg`.
-- `NetherlandsValidator` — advisory validator; flags the frame, never blocks a keystroke.
+Each spec is one plate layout.
+
+- `NetherlandsPlates.sidecode6`
+- `NetherlandsPlates.sidecode7`
+- `NetherlandsPlates.sidecode8`
+- `NetherlandsPlates.sidecode9`
+- `NetherlandsPlates.sidecode10`
+- `NetherlandsPlates.sidecode11`
+- `NetherlandsPlates.sidecode12`
+- `NetherlandsPlates.sidecode13`
+- `NetherlandsPlates.sidecode14`
+- `NetherlandsPlates.royal`
+- `NetherlandsPlates.trailer`
+- `NetherlandsPlates.special`
+- `NetherlandsPlates.diplomatic`
+- `NetherlandsPlates.consular`
+- `NetherlandsPlates.dealer`
+- `NetherlandsPlates.bfg`
+
+## Themes
+
+- `NetherlandsThemes.standard`
+- `NetherlandsThemes.dealer`
+- `NetherlandsThemes.bfg`
+
+## Change it
+
+`PlateCanvas` takes `spec:` (an entry of `NetherlandsPlates`) and `theme:` (an entry of `NetherlandsThemes`). Set `validator:` to `NetherlandsValidator()` and `autoValidate: true` to show validation hints.
+
+## Also included
+
+- `NetherlandsCountry` — the country panel.
+- `NetherlandsValidator` — the plate validator.
 
 ## Plates
 
@@ -68,3 +108,6 @@ EU panel).
 
 Painted by [`plate_core`](https://pub.dev/packages/plate_core); alphabets shared through [`plate_alphabet`](https://pub.dev/packages/plate_alphabet); optional character picker in [`plate_keypad`](https://pub.dev/packages/plate_keypad).
 
+## License
+
+See [LICENSE](https://github.com/ArAd1Beyranvand/netherlands_plate/blob/main/LICENSE).

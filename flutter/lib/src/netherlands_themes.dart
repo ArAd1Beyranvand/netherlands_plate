@@ -27,7 +27,6 @@ abstract final class NetherlandsThemes {
 PlateTheme _theme(Color field, Color ink) => PlateTheme.monochrome(
   field: field,
   ink: ink,
-  inactive: NetherlandsColors.inactive,
   borderWidthRatio: 0.012,
   plateRadiusRatio: 0.04,
 );

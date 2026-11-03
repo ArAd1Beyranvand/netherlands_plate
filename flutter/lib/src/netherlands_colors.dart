@@ -18,6 +18,4 @@ abstract final class NetherlandsColors {
 
   static const Color bfgField = Color(0xFF383837);
   static const Color bfgInk = Color(0xFFF0F0F0);
-
-  static const Color inactive = Color(0xFFB0B0B0);
 }

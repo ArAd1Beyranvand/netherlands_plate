@@ -1,5 +1,3 @@
-import 'dart:math' as math;
-
 import 'package:plate_alphabet/plate_alphabet.dart';
 import 'package:plate_core/plate_core.dart';
 
@@ -23,12 +21,11 @@ import 'netherlands_country.dart';
 /// pitch is ~54 (two glyphs 105 wide, three 160), so `spacing` is
 /// `54 - 0.6 * 0.72 * 110`.
 abstract final class _Layout {
-  static const double width = 520, height = 110;
-  static const double panelEnd = 49;
+  static const double width = 520, height = 110, panelEnd = 49;
   static const PlateBox panelBox = PlateBox(0, 0, panelEnd, height);
 
   static const double pitch = 54;
-  static final double spacing = math.max(0, pitch - 0.6 * 0.72 * height);
+  static final double spacing = plateRunSpacing(pitch, height);
 
   static const double dashWidth = 18, dashHeight = 9.25, dashTop = 46.75;
 }
@@ -47,8 +44,7 @@ class _Field {
 
   PlateSlot get slot {
     final bool fixed = minLength == length;
-    final double centre = (left + right) / 2;
-    final double w = length * _Layout.pitch;
+    final double centre = (left + right) / 2, w = length * _Layout.pitch;
     return PlateSlot(
       alphabet: kind == _Kind.letters
           ? NetherlandsAlphabets.letters
