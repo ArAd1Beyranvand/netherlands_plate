@@ -1,4 +1,4 @@
-import { GatedPlateValidator, type PlateEntry, type PlateValidation, invalid, valid } from '../../core/validators/plate_validator';
+import { GatedPlateValidator, type PlateEntry, type PlateValidation, invalid, valid } from 'plate_core/core/validators/plate_validator';
 
 const consonants = 'BDFGHJKLNPRSTVXZ';
 const alphanumeric = /^[A-Z0-9]+$/;
